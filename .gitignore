@@ -1,1 +1,18 @@
+# Ignore SUMO output files
+*.xml
 
+# But keep config files you need
+!grid.net.xml
+!grid.rou.xml
+!grid.sumocfg
+!trips.trips.xml
+
+# Ignore simulation logs and temporary files
+*.log
+*.out
+*.tmp
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
