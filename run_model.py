@@ -7,7 +7,7 @@ import random
 # --- (Functions from Step 3: Parsing and Discretization) ---
 
 def parse_fcd_output(xml_file):
-    # (Code is identical to the previous step)
+
     trajectories = defaultdict(list)
     try:
         for _, elem in ET.iterparse(xml_file):
@@ -22,7 +22,7 @@ def parse_fcd_output(xml_file):
     return trajectories
 
 def discretize_all_trajectories(trajectories_coords, cell_size=50):
-    # (Code is identical to the previous step, just bundled here)
+    
     all_points = [point for traj in trajectories_coords.values() for point in traj]
     if not all_points: return {}, 0, 0, 0, 0
     min_x, max_x = min(p[0] for p in all_points), max(p[0] for p in all_points)
